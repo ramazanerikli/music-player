@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Player</title>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="player">
+            <audio src="./audio/spring-waltz.mp3" id="track"></audio>
+            <div class="track-cover">
+                <div id="surface"></div>
+                <img src="img/chopin.jpg" id="cover">
+            </div>
+            <div id="track-info">
+                <div class="track-title">Spring Waltz</div>
+                <div class="track-artist">Chopin</div>
+            </div>
+            <div id="progress-bar">
+                <div id="progress-value">
+                    <div class="pin"></div>
+                </div>
+            </div>
+            <div id="player-time">
+                <div id="current-time"></div>
+                <div id="duration-time"></div>
+            </div>
+            <div id="player-controls">
+                <div class="control" id="prev-song" onclick="previousSong()">
+                    <i class="fas fa-backward"></i>
+                </div>
+                <div class="control" id="play-pause" onclick="playPause()">
+                    <i class="fas fa-play" id="play-pause-icon"></i>
+                </div>
+                <div class="control" id="next-song" onclick="nextSong()">
+                    <i class="fas fa-forward"></i>
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
